@@ -1,0 +1,92 @@
+$bg: #005f08
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    transition: .3s ease-in
+
+body
+    background-color: #fff
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    padding: 1rem 1rem
+    color: white
+    overflow: hidden
+
+.bg
+    position: absolute
+    top: 0
+    left: 0
+    width: 50%
+    height: 95%
+    z-index: -10
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    background-color: $bg
+
+.container
+    max-width: 1280px
+    margin: 0 auto
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    display: flex
+    flex-direction: column
+    gap: 5vh
+    text-align: center
+
+    .baner
+        top: 0
+        position: relative
+
+        h1
+            text-transform: uppercase
+            letter-spacing: .15rem
+            background-color: $bg
+            padding: 1rem
+            border-radius: 1rem
+        
+    .main
+        display: flex
+        gap:5vh
+        flex-direction: column
+        text-align: center
+
+        .inp
+            padding: 1rem 3rem
+            text-align: center
+            border: .15rem solid grey
+            border-bottom: .25rem solid grey
+            border-right: .25rem solid grey
+            border-radius: .5rem
+
+            :focus
+                border: .15rem solid grey
+                border-bottom: .25rem solid grey
+                border-right: .25rem solid grey
+
+.objContainer
+    display: flex
+    gap: 2rem
+    left: 50%
+    position: relative
+    transform: translateX(-50%)
+
+.obj
+    width: 10rem
+    height: 10rem
+    background-color: $bg
+    border: .3rem solid white
+    border-radius: 1rem
+
+    left: 50%
+    position: relative
+    transform: translateX(-50%)
+
+.obj2
+    opacity: 0
+    border: .3rem solid $bg
+    background-color: #fff
+
