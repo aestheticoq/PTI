@@ -1,5 +1,6 @@
 const obj = document.querySelectorAll('.obj')
 const obj2 = document.querySelector('.obj2')
+const objContainer = document.querySelector('.objContainer')
 
 const inp = document.querySelector('.inp')
 
@@ -11,6 +12,14 @@ function normal(e){
         objStyleBuilder('borderRadius', e.target.value.replace('radius', ''), true)
     }else if(e.target.value.toLowerCase().includes('border')){
         objStyleBuilder('border', e.target.value.replace('border', ''), true)
+    }else if(e.target.value.toLowerCase().includes('rotate')){
+        objStyleBuilder('rotate', e.target.value.replace('rotate', ''), true)
+    }else if(e.target.value.toLowerCase().includes('width')){
+        objStyleBuilder('width', e.target.value.replace('width', ''), true)
+    }else if(e.target.value.toLowerCase().includes('height')){
+        objStyleBuilder('height', e.target.value.replace('height', ''), true)
+    }else if(e.target.value.toLowerCase().includes('position')){
+        objStyleBuilder('position', e.target.value.replace('position', ''), true)
     }
 }
 
@@ -34,6 +43,18 @@ function cloneUnClone(e){
         objStyleBuilder('position', 'relative', false)
         objStyleBuilder('transform', 'translateX(-50%)', false)
     }
+
+    if(e.target.value.toLowerCase().includes('allrotate')){
+        objContainerStyleBuilder('rotate', e.target.value.replace('allrotate', ''))
+    }
+
+    if(e.target.value.toLowerCase().includes('gap')){
+        objContainerStyleBuilder('gap', e.target.value.replace('gap', ''))
+    }
+
+    if(e.target.value.toLowerCase().includes('display')){
+        objContainerStyleBuilder('display', e.target.value.replace('display', ''))
+    }
 }
 
 
@@ -49,6 +70,10 @@ function objStyleBuilder(styleProperty, value, isVisible){
             el.style[styleProperty] = value
         }
     });
+}
+
+function objContainerStyleBuilder(styleProperty, value){
+    objContainer.style[styleProperty] = value;
 }
 
 
